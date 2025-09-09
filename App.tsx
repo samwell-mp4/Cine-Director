@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import Header from './components/Header';
 import CreativeInput from './components/CreativeInput';
@@ -33,7 +32,7 @@ const App: React.FC = () => {
   }, [idea]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
+    <div className="min-h-screen bg-[#1a1a1a] text-gray-200 font-sans">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         <Header />
         <main>
@@ -43,7 +42,7 @@ const App: React.FC = () => {
             onSubmit={handleGenerate}
             isLoading={isLoading}
           />
-          {error && <div className="mt-4 text-center text-red-400 bg-red-900/50 p-3 rounded-lg">{error}</div>}
+          {error && <div className="mt-4 text-center text-orange-300 bg-orange-900/50 p-3 rounded-lg border border-orange-700/50">{error}</div>}
           
           {isLoading && <LoadingScreen />}
           
@@ -53,7 +52,7 @@ const App: React.FC = () => {
             </div>
           )}
         </main>
-        <footer className="text-center mt-12 text-gray-500 text-sm">
+        <footer className="text-center mt-12 text-gray-600 text-sm">
             <p>Powered by Gemini API</p>
         </footer>
       </div>
